@@ -41,6 +41,26 @@ class ViewController: UIViewController {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+        
+        reset()
+    }
+   
+    @IBAction func onClearPressed(sender: UIButton) {
+        if runningNumber == "" {
+            reset()
+        }
+        else {
+            runningNumber = ""
+        }
+    }
+    
+    func reset() {
+        runningNumber = ""
+        leftValStr = ""
+        rightValStr = ""
+        currentOperation = Operation.Empty
+        result = ""
+        outputLabel.text = "0"
     }
     
     @IBAction func numberPressed(sender: UIButton) {

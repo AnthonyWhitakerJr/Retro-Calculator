@@ -189,6 +189,13 @@
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ3-Yu-OLE">
+                                <rect key="frame" x="20" y="536" width="177" height="56"/>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S61-pg-hK4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -232,6 +239,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
