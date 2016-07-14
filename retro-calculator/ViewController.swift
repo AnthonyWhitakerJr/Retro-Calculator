@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     var rightValStr = ""
     var currentOperation:Operation = Operation.Empty
     var result = ""
+    var wasLastButtonEquals:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +65,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func numberPressed(sender: UIButton) {
+        if wasLastButtonEquals {
+            reset()
+        }
+        
         playSound()
         runningNumber += "\(sender.tag)"
         outputLabel.text = runningNumber
+        wasLastButtonEquals = false
+
     }
     
     @IBAction func onDividePressed(sender: UIButton) {
@@ -86,11 +93,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onEqualsPressed(sender: UIButton) {
-        if runningNumber == "" {
-            runningNumber = rightValStr
+        if leftValStr != "" {
+            if runningNumber == "" {
+                runningNumber = rightValStr
+            }
+            
+            processOperation(currentOperation)
+            wasLastButtonEquals = true
         }
-        
-        processOperation(currentOperation)
     }
     
     func processOperation(operation : Operation) {
@@ -124,6 +134,8 @@ class ViewController: UIViewController {
             
             currentOperation = operation
         }
+        
+        wasLastButtonEquals = false
     }
     
     func playSound() {
