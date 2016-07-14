@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Minecraft.ttf">
@@ -189,8 +191,11 @@
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ3-Yu-OLE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ3-Yu-OLE">
                                 <rect key="frame" x="20" y="536" width="177" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EQ3-Yu-OLE" secondAttribute="height" multiplier="333:114" id="BQP-Lk-94R"/>
+                                </constraints>
                                 <state key="normal" image="clear"/>
                                 <connections>
                                     <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S61-pg-hK4"/>
@@ -205,7 +210,9 @@
                             <constraint firstItem="gZz-Gz-rxE" firstAttribute="top" secondItem="D7c-d4-Tnp" secondAttribute="top" constant="25" id="OVI-nP-Npf"/>
                             <constraint firstItem="JCZ-Q0-kcS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OfD-kr-jDE"/>
                             <constraint firstItem="Fe2-6R-PD1" firstAttribute="leading" secondItem="waA-cu-OZs" secondAttribute="leading" constant="10" id="SZL-6N-IbH"/>
+                            <constraint firstItem="EQ3-Yu-OLE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="U9g-pJ-EfQ"/>
                             <constraint firstItem="xUI-SV-qWy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YE4-41-jIL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EQ3-Yu-OLE" secondAttribute="bottom" constant="8" id="ZrI-WQ-1qw"/>
                             <constraint firstAttribute="trailing" secondItem="xUI-SV-qWy" secondAttribute="trailing" id="b2t-Df-8Ra"/>
                             <constraint firstItem="FmV-Nj-2Y7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dXp-pN-I2m"/>
                             <constraint firstItem="Fe2-6R-PD1" firstAttribute="bottom" secondItem="waA-cu-OZs" secondAttribute="bottom" constant="-15" id="fKW-nU-FZd"/>
@@ -213,6 +220,7 @@
                             <constraint firstItem="gZz-Gz-rxE" firstAttribute="leading" secondItem="D7c-d4-Tnp" secondAttribute="leading" constant="15" id="lr5-Yj-Dea"/>
                             <constraint firstItem="gZz-Gz-rxE" firstAttribute="trailing" secondItem="D7c-d4-Tnp" secondAttribute="trailing" constant="-15" id="ndc-Vy-tMo"/>
                             <constraint firstItem="Fe2-6R-PD1" firstAttribute="trailing" secondItem="waA-cu-OZs" secondAttribute="trailing" constant="-10" id="tyl-SB-Ypg"/>
+                            <constraint firstItem="EQ3-Yu-OLE" firstAttribute="height" secondItem="FHh-fZ-64v" secondAttribute="height" id="unm-z4-c1t"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xUI-SV-qWy" secondAttribute="bottom" id="zEp-ww-zb0"/>
                             <constraint firstItem="Fe2-6R-PD1" firstAttribute="top" secondItem="waA-cu-OZs" secondAttribute="top" constant="15" id="ztA-dJ-Ukh"/>
                         </constraints>
